@@ -4,8 +4,9 @@ import logo from './imagens/Logo.png'
 
 
 
+
 function App() {
-  const[email, setEmail] = useState("")
+  const[nome, setnome] = useState("")
   const[password, setPassword] = useState("")
 
   return (
@@ -22,12 +23,12 @@ function App() {
 
             <div className="wrap-input">
               <input
-               className={email !== "" ? 'has-val input' : 'input' }
-               type="email"
-               value={email}
-               onChange={e => setEmail(e.target.value)}
+               className={nome !== "" ? 'has-val input' : 'input' }
+               type="string"
+               value={nome}
+               onChange={e => setnome(e.target.value)}
                />
-              <span className="focus-input" data-placeholder="Email"></span>
+              <span className="focus-input" data-placeholder="Nome"></span>
             </div>
 
             <div className="wrap-input">
@@ -37,7 +38,7 @@ function App() {
               value={password}
               onChange={e => setPassword(e.target.value)}
               />
-              <span className="focus-input" data-placeholder="password"></span>
+              <span className="focus-input" data-placeholder="Password"></span>
             </div>
 
             <div className="conntainer-login-form-btn">
